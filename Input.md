@@ -39,21 +39,28 @@ ng g c genericAlertButton
 ### Dans 📄 generic-alert-button.component.ts
 
 ```tsx
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-generic-alert-button',
+  standalone:true,
+  imports : [],
+  templateUrl: './generic-alert-button.component.html',
+  styleUrls: ['./generic-alert-button.component.css']
+})
 export class GenericAlertButtonComponent {
 
-  // Propriété d'entrée `buttonTitle` définie avec le décorateur `@Input`
   @Input()
-  buttonTitle!: string;
+  buttonTitleEnfant!: string;
 
-  // Propriété d'entrée `alertMessage` définie avec le décorateur `@Input`
   @Input()
-  alertMessage!: string;
+  alertMessageEnfant!: string;
 
-  // Méthode `afficheAlert` appelée lorsqu'un événement de clic se produit sur le bouton
-  afficheAlert() {
-    // Affiche une boîte de dialogue avec le message d'alerte spécifié
-    alert(this.alertMessage);
+  onClick() {
+    // Le mot clef this permet d'accéder aux prporpiétés du composant
+    alert(this.alertMessageEnfant);
   }
+}
 
 ```
 
