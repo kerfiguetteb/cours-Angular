@@ -137,5 +137,3 @@ export class ProfileComponent implements OnInit {
 ```
 
 - **`OnInit`** : Une interface qui permet de définir le hook `ngOnInit`, une méthode appelée par Angular juste après la création du composant. C'est l'endroit idéal pour initialiser les données du composant.
-
-[Cycles de vies](https://www.notion.so/Cycles-de-vies-ed373f50c24441c7bc121c2efbbf71ab?pvs=21)
